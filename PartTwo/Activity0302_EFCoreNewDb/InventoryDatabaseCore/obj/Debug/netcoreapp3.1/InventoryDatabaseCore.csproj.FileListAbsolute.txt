@@ -1,0 +1,15 @@
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\bin\Debug\netcoreapp3.1\InventoryDatabaseCore.deps.json
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\bin\Debug\netcoreapp3.1\InventoryDatabaseCore.runtimeconfig.json
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\bin\Debug\netcoreapp3.1\InventoryDatabaseCore.runtimeconfig.dev.json
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\bin\Debug\netcoreapp3.1\InventoryDatabaseCore.dll
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\bin\Debug\netcoreapp3.1\InventoryDatabaseCore.pdb
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.csprojAssemblyReference.cache
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.AssemblyInfoInputs.cache
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.AssemblyInfo.cs
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.csproj.CoreCompileInputs.cache
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.dll
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.pdb
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.genruntimeconfig.cache
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\bin\Debug\netcoreapp3.1\InventoryModels.dll
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\bin\Debug\netcoreapp3.1\InventoryModels.pdb
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryDatabaseCore\obj\Debug\netcoreapp3.1\InventoryDatabaseCore.csproj.CopyComplete
