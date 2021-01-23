@@ -6,7 +6,7 @@ using System.IO;
 
 namespace InventoryDatabaseCore
 {
-    public class InventoryDbContext:DbContext
+    public class InventoryDbContext : DbContext
     {
         private static IConfigurationRoot _configuration;
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -27,13 +27,43 @@ namespace InventoryDatabaseCore
             }
         }
         public DbSet<Item> Items { get; set; }
-        public InventoryDbContext():base()
+        public InventoryDbContext() : base()
         {
 
         }
-        public InventoryDbContext(DbContextOptions options):base()
+        public InventoryDbContext(DbContextOptions options) : base()
         {
-            
+
+        }
+
+
+        public override int SaveChanges()
+        {
+            var tracker = ChangeTracker;
+            foreach (var entry in tracker.Entries())
+            {
+                //System.Diagnostics.Debug.WriteLine($"{entry.Entity} has state {entry.State}");
+                if(entry.Entity is FullAuditModel)
+                {
+                    var referenceEntity = entry.Entity as FullAuditModel;
+
+                    switch (entry.State)
+                    {
+                        case EntityState.Added:
+                            referenceEntity.CreatedDate = System.DateTime.Now;
+                            break;
+                        case EntityState.Deleted:
+                        case EntityState.Modified:
+                            referenceEntity.LastModifiedDate = System.DateTime.Now;
+                            break;
+                        default:
+                            break;
+
+                    }
+                }
+            }
+
+            return base.SaveChanges();
         }
     }
 }

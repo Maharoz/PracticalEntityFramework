@@ -17,9 +17,13 @@ namespace Activity0302_EFCoreNewDb
         {
             BuildOptions();
             Console.WriteLine(_configuration.GetConnectionString("InventoryManager"));
+            DeleteAllItems();
             InsertItems();
+            UpdateItems();
             ListInventory();
-            
+
+
+
 
         }
         static void BuildOptions()
@@ -32,7 +36,7 @@ namespace Activity0302_EFCoreNewDb
         }
         static void ListInventory()
         {
-            using(var db = new InventoryDbContext(_optionsBuilder.Options))
+            using (var db = new InventoryDbContext(_optionsBuilder.Options))
             {
                 var items = db.Items.Take(5).OrderBy(x => x.Name).ToList();
                 items.ForEach(x => Console.WriteLine($"New Item:{ x.Name}"));
@@ -50,12 +54,41 @@ namespace Activity0302_EFCoreNewDb
                  new Item() { Name = "Remember the Titans"}
             };
 
-            using(var db = new InventoryDbContext(_optionsBuilder.Options))
+            using (var db = new InventoryDbContext(_optionsBuilder.Options))
             {
                 db.AddRange(items);
                 db.SaveChanges();
             }
-           
+
+        }
+
+        static void DeleteAllItems()
+        {
+            using (var db = new InventoryDbContext(_optionsBuilder.Options))
+            {
+                var items = db.Items.ToList();
+                db.Items.RemoveRange(items);
+                db.SaveChanges();
+            }
+        }
+
+
+        static void UpdateItems()
+        {
+            using (var db = new InventoryDbContext(_optionsBuilder.
+            Options))
+            {
+                var items = db.Items.ToList();
+                foreach (var item in items)
+                {
+                    item.LastModifiedUserId = 1;
+                    item.CurrentOrFinalPrice = 9.99M;
+
+                }
+                db.Items.UpdateRange(items);
+                db.SaveChanges();
+
+            }
         }
     }
 }
