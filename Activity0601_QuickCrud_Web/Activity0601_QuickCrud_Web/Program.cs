@@ -1,3 +1,4 @@
+using Activity0601_QuickCrud_Web.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -22,5 +23,7 @@ namespace Activity0601_QuickCrud_Web
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+       
     }
 }
