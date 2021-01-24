@@ -6,3 +6,4 @@ G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryModels\obj
 G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryModels\obj\Debug\netcoreapp3.1\InventoryModels.csproj.CoreCompileInputs.cache
 G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryModels\obj\Debug\netcoreapp3.1\InventoryModels.dll
 G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryModels\obj\Debug\netcoreapp3.1\InventoryModels.pdb
+G:\PracticalEntityFramework\PartTwo\Activity0302_EFCoreNewDb\InventoryModels\obj\Debug\netcoreapp3.1\InventoryModels.csprojAssemblyReference.cache

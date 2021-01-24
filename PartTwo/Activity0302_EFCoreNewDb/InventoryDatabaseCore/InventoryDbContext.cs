@@ -27,6 +27,8 @@ namespace InventoryDatabaseCore
             }
         }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CategoryColor> CaategoryColor { get; set; }
         public InventoryDbContext() : base()
         {
 
