@@ -47,11 +47,11 @@ namespace Activity0302_EFCoreNewDb
         {
             var items = new List<Item>()
             {
-                 new Item() { Name = "Top Gun"},
-                 new Item() { Name = "Batman Begins"},
-                 new Item() { Name = "Inception"},
-                 new Item() { Name = "Star Wars: The Empire Strikes Back"},
-                 new Item() { Name = "Remember the Titans"}
+                new Item() { Name = "Top Gun", IsActive = true, Description="I feel the need, the need for speed" },
+                new Item() { Name = "Batman Begins", IsActive = true, Description = "You either die the hero or live long enough to see yourself become the villain"},
+                new Item() { Name = "Inception", IsActive = true, Description = "You mustn't be afraid to dream a little bigger" },
+                new Item() { Name = "Star Wars: The Empire Strikes Back",IsActive = true, Description = "He will join us or die, master"},
+                new Item() {Name = "Remember the Titans", IsActive = true,Description = "Attitude reflects leadership"}
             };
 
             using (var db = new InventoryDbContext(_optionsBuilder.Options))
