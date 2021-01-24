@@ -77,6 +77,41 @@ namespace InventoryDatabaseCore.Migrations
                     b.ToTable("CaategoryColor");
                 });
 
+            modelBuilder.Entity("InventoryModels.Genre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("LastModifiedUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genres");
+                });
+
             modelBuilder.Entity("InventoryModels.Item", b =>
                 {
                     b.Property<int>("Id")
@@ -143,6 +178,48 @@ namespace InventoryDatabaseCore.Migrations
                     b.ToTable("Items");
                 });
 
+            modelBuilder.Entity("InventoryModels.ItemGenre", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("CreatedByUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("LastModifiedUserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GenreId");
+
+                    b.HasIndex("ItemId", "GenreId")
+                        .IsUnique()
+                        .IsClustered(false);
+
+                    b.ToTable("ItemGenre");
+                });
+
             modelBuilder.Entity("InventoryModels.CategoryColor", b =>
                 {
                     b.HasOne("InventoryModels.Category", "Category")
@@ -161,9 +238,33 @@ namespace InventoryDatabaseCore.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("InventoryModels.ItemGenre", b =>
+                {
+                    b.HasOne("InventoryModels.Genre", "Genre")
+                        .WithMany("ItemGenres")
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("InventoryModels.Item", "Item")
+                        .WithMany()
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Genre");
+
+                    b.Navigation("Item");
+                });
+
             modelBuilder.Entity("InventoryModels.Category", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("InventoryModels.Genre", b =>
+                {
+                    b.Navigation("ItemGenres");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,6 +9,14 @@ namespace InventoryDatabaseCore
     public class InventoryDbContext : DbContext
     {
         private static IConfigurationRoot _configuration;
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ItemGenre>()
+                .HasIndex(ig => new { ig.ItemId, ig.GenreId })
+                .IsUnique()
+                .IsClustered(false);
+}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -29,6 +37,7 @@ namespace InventoryDatabaseCore
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryColor> CaategoryColor { get; set; }
+        public DbSet<Genre> Genres { get; set; }
         public InventoryDbContext() : base()
         {
 

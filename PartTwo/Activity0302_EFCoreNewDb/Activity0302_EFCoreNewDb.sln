@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Activity0302_EFCoreNewDb", "Activity0302_EFCoreNewDb\Activity0302_EFCoreNewDb.csproj", "{E3D70EBE-CAE1-43D1-9B8A-59DD5343CBAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Activity0302_EFCoreNewDb", "Activity0302_EFCoreNewDb\Activity0302_EFCoreNewDb.csproj", "{E3D70EBE-CAE1-43D1-9B8A-59DD5343CBAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryDatabaseCore", "InventoryDatabaseCore\InventoryDatabaseCore.csproj", "{C0BBD8CB-0B2E-48B8-9950-23BD847AA142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryDatabaseCore", "InventoryDatabaseCore\InventoryDatabaseCore.csproj", "{C0BBD8CB-0B2E-48B8-9950-23BD847AA142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryModels", "InventoryModels\InventoryModels.csproj", "{BC652A00-2EB0-4BE3-B483-9FE23747B42A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryModels", "InventoryModels\InventoryModels.csproj", "{BC652A00-2EB0-4BE3-B483-9FE23747B42A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
